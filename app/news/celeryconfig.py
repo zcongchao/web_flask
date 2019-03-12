@@ -1,5 +1,5 @@
 # coding=utf-8
-BROKER_URL = 'amqp://zoucongchao:6964433zou@localhost/myvhost'
+BROKER_URL = 'amqp://zoucongchao:''@localhost/myvhost'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/6'
 #将序列化消息反序列化
 CELERY_TASK_SERIALIZER = 'msgpack'
