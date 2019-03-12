@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% import "_macros.html" as macros %}
+
+{% block content %}
+  <div class="entries-area">
+      <h3>财经资讯</h3>
+      <p>{{datas}}<p>
+    {% for data in datas %}
+    
+    <div>
+    <h4>{{data}}</h4>
+    <!--p>{{data[1]}}</p>
+    <p>{{data[2]}}</p-->
+    </div>
+    
+    {% endfor %}
+  </div>
+{% endblock %}
+
+
+<!--!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <title>财经资讯</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" >  
+  </head>
+  <body>
+    <h1>财经资讯</h1>
+    <div class="entries-area">
+        {% for data in datas %}
+        {% for i in data %}
+        <p>{{i}}</p>
+        {% endfor %}
+        {% endfor %}
+    </div>
+  </body>
+</html-->
