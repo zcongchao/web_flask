@@ -18,6 +18,10 @@ login_manager.login_view = 'auth.login'
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+
+    from .api import api
+    api.init_app(app)
+
     Config.init_app(app)
     CsrfProtect(app)
 
@@ -41,6 +45,10 @@ def create_app():
 
     from .data import data as news_blueprint
     app.register_blueprint(news_blueprint, url_prefix='/data')
+
+    from .api import res as res_blueprint
+    app.register_blueprint(res_blueprint, url_prefix='/res')
+
 
     return app
 
